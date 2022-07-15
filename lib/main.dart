@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './categories_screens.dart';
 
 void main() {
   runApp(
@@ -7,8 +8,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,8 +20,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePageState extends StatefulWidget {
-  const MyHomePageState({Key? key}) : super(key: key);
-
   @override
   State<MyHomePageState> createState() => _MyHomePageStateState();
 }
@@ -34,7 +31,15 @@ class _MyHomePageStateState extends State<MyHomePageState> {
       appBar: AppBar(
         title: Text('DeliMeals'),
       ),
-      body: Center(child: Text('Navigation Time')),
+      body: Center(
+          child: TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CategoriesScreen()));
+              },
+              child: Text('Pindah'))),
     );
   }
 }
