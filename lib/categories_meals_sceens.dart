@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CategoriesMealsScreen extends StatelessWidget {
+  static const routeName = "/categories-meals";
   @override
   Widget build(BuildContext context) {
     //Memangil variable yang sudah di masukan ke argument

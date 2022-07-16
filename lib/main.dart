@@ -19,8 +19,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
       ),
-      home: CategoriesScreen(),
-      routes: {'/categories': (context) => CategoriesMealsScreen()},
+      // home: CategoriesScreen(), kalau menambahkan '/' dalam route maka akan membaca '/' sebagai route awal
+      routes: {
+        '/': (context) => CategoriesScreen(),
+        CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen()
+      },
     );
   }
 }
