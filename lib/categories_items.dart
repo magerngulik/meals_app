@@ -10,9 +10,8 @@ class CategoriesItems extends StatelessWidget {
   const CategoriesItems({this.id, this.title, this.color});
 
   void selectCategories(BuildContext ctx) {
-    Navigator.push(ctx, MaterialPageRoute(builder: (_) {
-      return CategoriesMealsScreen(title, id);
-    }));
+    Navigator.of(ctx)
+        .pushNamed('/categories', arguments: {'id': id, 'title': title});
   }
 
   @override
