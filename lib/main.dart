@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+        fontFamily: 'Raleway',
+        primarySwatch: Colors.pink,
+        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+      ),
       home: CategoriesScreen(),
     );
   }
