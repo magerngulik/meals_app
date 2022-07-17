@@ -38,10 +38,10 @@ class MainDrawer extends StatelessWidget {
         height: 10,
       ),
       buildListTile('Meals', Icons.restaurant, () {
-        Navigator.of(context).pushNamed('/');
+        Navigator.of(context).pushReplacementNamed('/');
       }),
       buildListTile('Filter', Icons.settings, () {
-        Navigator.pushNamed(context, FilterScreen.routeName);
+        Navigator.pushReplacementNamed(context, FilterScreen.routeName);
       }),
     ]));
   }
