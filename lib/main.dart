@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/screens/meal_detail_screen.dart';
 import './screens/categories_screens.dart';
 import './screens//categories_meals_sceens.dart';
+import './screens/meal_detail_screen.dart';
 
 void main() {
   runApp(
@@ -22,7 +24,20 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(), kalau menambahkan '/' dalam route maka akan membaca '/' sebagai route awal
       routes: {
         '/': (context) => CategoriesScreen(),
-        CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen()
+        CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen(),
+        MealDetailScreens.routeName: (context) => MealDetailScreens()
+      },
+      onGenerateRoute: (settings) {
+        print(settings.arguments);
+        // if (setting.name =='/meal-detail') {
+        //   return ...;
+        // }else if(setting.name =='/somthing-else'){
+        //   return ...;
+        // }
+        // return MaterialPageRoute(builder: ((context) => CategoriesMealsScreen()));
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: ((context) => CategoriesScreen()));
       },
     );
   }
