@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/screens/meal_detail_screen.dart';
+import 'package:meals_app/screens/tabs_screen.dart';
 import './screens/categories_screens.dart';
 import './screens//categories_meals_sceens.dart';
 import './screens/meal_detail_screen.dart';
@@ -23,9 +24,10 @@ class MyApp extends StatelessWidget {
       ),
       // home: CategoriesScreen(), kalau menambahkan '/' dalam route maka akan membaca '/' sebagai route awal
       routes: {
-        '/': (context) => CategoriesScreen(),
+        '/': (context) => TabsScreen(),
         CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen(),
-        MealDetailScreens.routeName: (context) => MealDetailScreens()
+        MealDetailScreens.routeName: (context) => MealDetailScreens(),
+        // TabsScreen.routeName: (context) => TabsScreen(),
       },
       onGenerateRoute: (settings) {
         print(settings.arguments);
