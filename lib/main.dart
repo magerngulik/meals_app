@@ -4,6 +4,7 @@ import 'package:meals_app/screens/tabs_screen.dart';
 import './screens/categories_screens.dart';
 import './screens//categories_meals_sceens.dart';
 import './screens/meal_detail_screen.dart';
+import './screens/filter_screens.dart';
 
 void main() {
   runApp(
@@ -27,6 +28,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => TabsScreen(),
         CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen(),
         MealDetailScreens.routeName: (context) => MealDetailScreens(),
+        FilterScreen.routeName: (context) => FilterScreen()
+
         // TabsScreen.routeName: (context) => TabsScreen(),
       },
       onGenerateRoute: (settings) {
