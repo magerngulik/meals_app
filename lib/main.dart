@@ -26,8 +26,8 @@ class MyApp extends StatelessWidget {
       // home: CategoriesScreen(), kalau menambahkan '/' dalam route maka akan membaca '/' sebagai route awal
       routes: {
         '/': (context) => TabsScreen(),
-        CategoriesMealsScreen.routeName: (context) => CategoriesMealsScreen(),
-        MealDetailScreens.routeName: (context) => MealDetailScreens(),
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (context) => MealDetailScreen(),
         FilterScreen.routeName: (context) => FilterScreen()
 
         // TabsScreen.routeName: (context) => TabsScreen(),
